@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🧩 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🧩 BrainyBits - Daily Logic Puzzle Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      width: 90%;
+      max-width: 420px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #38bdf8;
+      border: none;
+      color: black;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #0ea5e9;
+    }
+
+    .answer {
+      margin-top: 10px;
+      background: #334155;
+      padding: 10px;
+      border-radius: 5px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🧩 BrainyBits</h1>
+    <p id="puzzle"></p>
+    <button id="showAnswerBtn">Show Answer</button>
+    <div id="answer" class="answer"></div>
+    <br>
+    <button id="nextBtn">Next Puzzle ➡️</button>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const puzzles = [
+        {
+          question: "There are three switches outside a room. Only one switch controls a bulb inside the room. You can enter the room only once. How will you find which switch controls the bulb?",
+          answer: "Turn on one switch for a few minutes, then turn it off and turn on another. Enter the room — if the bulb is on, it's the second switch; if off but warm, it's the first; if cold, it's the third."
+        },
+        {
+          question: "A man looks at a painting and says, 'Brothers and sisters, I have none, but that man's father is my father's son.' Who is in the painting?",
+          answer: "The man’s son."
+        },
+        {
+          question: "What comes once in a minute, twice in a moment, but never in a thousand years?",
+          answer: "The letter 'M'."
+        },
+        {
+          question: "A farmer has 17 sheep. All but 9 run away. How many are left?",
+          answer: "9 sheep are left."
+        }
+      ];
+
+      let index = 0;
+
+      const puzzleText = document.getElementById("puzzle");
+      const answerBox = document.getElementById("answer");
+      const showAnswerBtn = document.getElementById("showAnswerBtn");
+      const nextBtn = document.getElementById("nextBtn");
+
+      function showPuzzle() {
+        puzzleText.textContent = puzzles[index].question;
+        answerBox.textContent = puzzles[index].answer;
+        answerBox.style.display = "none";
+        showAnswerBtn.textContent = "Show Answer";
+      }
+
+      showAnswerBtn.addEventListener("click", function() {
+        if (answerBox.style.display === "none") {
+          answerBox.style.display = "block";
+          showAnswerBtn.textContent = "Hide Answer";
+        } else {
+          answerBox.style.display = "none";
+          showAnswerBtn.textContent = "Show Answer";
+        }
+      });
+
+      nextBtn.addEventListener("click", function() {
+        index = (index + 1) % puzzles.length;
+        showPuzzle();
+      });
+
+      // show the first puzzle on page load
+      showPuzzle();
+    });
+  </script>
+</body>
+</html>
+ - Daily Logic Puzzle Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      width: 90%;
+      max-width: 420px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #38bdf8;
+      border: none;
+      color: black;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #0ea5e9;
+    }
+
+    .answer {
+      margin-top: 10px;
+      background: #334155;
+      padding: 10px;
+      border-radius: 5px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🧩 BrainyBits</h1>
+    <p id="puzzle"></p>
+    <button id="showAnswerBtn">Show Answer</button>
+    <div id="answer" class="answer"></div>
+    <br>
+    <button id="nextBtn">Next Puzzle ➡️</button>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const puzzles = [
+        {
+          question: "There are three switches outside a room. Only one switch controls a bulb inside the room. You can enter the room only once. How will you find which switch controls the bulb?",
+          answer: "Turn on one switch for a few minutes, then turn it off and turn on another. Enter the room — if the bulb is on, it's the second switch; if off but warm, it's the first; if cold, it's the third."
+        },
+        {
+          question: "A man looks at a painting and says, 'Brothers and sisters, I have none, but that man's father is my father's son.' Who is in the painting?",
+          answer: "The man’s son."
+        },
+        {
+          question: "What comes once in a minute, twice in a moment, but never in a thousand years?",
+          answer: "The letter 'M'."
+        },
+        {
+          question: "A farmer has 17 sheep. All but 9 run away. How many are left?",
+          answer: "9 sheep are left."
+        }
+      ];
+
+      let index = 0;
+
+      const puzzleText = document.getElementById("puzzle");
+      const answerBox = document.getElementById("answer");
+      const showAnswerBtn = document.getElementById("showAnswerBtn");
+      const nextBtn = document.getElementById("nextBtn");
+
+      function showPuzzle() {
+        puzzleText.textContent = puzzles[index].question;
+        answerBox.textContent = puzzles[index].answer;
+        answerBox.style.display = "none";
+        showAnswerBtn.textContent = "Show Answer";
+      }
+
+      showAnswerBtn.addEventListener("click", function() {
+        if (answerBox.style.display === "none") {
+          answerBox.style.display = "block";
+          showAnswerBtn.textContent = "Hide Answer";
+        } else {
+          answerBox.style.display = "none";
+          showAnswerBtn.textContent = "Show Answer";
+        }
+      });
+
+      nextBtn.addEventListener("click", function() {
+        index = (index + 1) % puzzles.length;
+        showPuzzle();
+      });
+
+      // show the first puzzle on page load
+      showPuzzle();
+    });
+  </script>
+</body>
+</html>
